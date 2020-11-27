@@ -8,19 +8,18 @@ import java.util.regex.Pattern;
 
 public class Test {
 	public static void main(String[] args) {
-		Logger logger = Logger.getLogger("lipan");
+		Logger logger = Logger.getLogger(Test.class.getName());
 		logger.info("112121");
 		String str1 = "\\W";
-		System.out.println("%%".matches(str1));
+		logger.severe(String.valueOf("%%".matches(str1)));
 		String str2 = "dcd";
-		System.out.println(str1.compareTo(str2));
+		logger.warning(String.valueOf(str1.compareTo(str2)));
 		System.out.println(12.9 % 5.0);
 		List<String> list = findPhone("iPhone number 13993176565");
 
 		for (String s : list) {
 			System.out.println(s);
 		}
-
 
 		BigDecimal bigDecimal = new BigDecimal("0.1");//精确计算
 		BigDecimal bigDecimal1 = new BigDecimal("0.2");
